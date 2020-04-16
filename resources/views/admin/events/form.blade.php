@@ -13,4 +13,6 @@
         'label' => 'Date',
         'withTime' => false
     ])
+
+    @formField('block_editor')
 @stop
