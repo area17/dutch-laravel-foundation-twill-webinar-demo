@@ -13,6 +13,11 @@ return [
                 'icon' => 'text',
                 'component' => 'a17-block-cta',
             ],
+            'speakers' => [
+                'title' => 'Speakers',
+                'icon' => 'text',
+                'component' => 'a17-block-speakers',
+            ],
         ],
     ],
 ];
