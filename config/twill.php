@@ -18,6 +18,21 @@ return [
                 'icon' => 'text',
                 'component' => 'a17-block-speakers',
             ],
+            'image' => [
+                'title' => 'Image',
+                'icon' => 'image',
+                'component' => 'a17-block-image',
+            ],
+        ],
+        'crops' => [
+            'image' => [
+                'default' => [
+                    [
+                        'name' => 'default',
+                        'ratio' => 0,
+                    ],
+                ],
+            ],
         ],
     ],
 ];

@@ -54,3 +54,22 @@ Route::name('event.show')->get('/{locale}/events/{slug}', function ($locale, $sl
         'item' => $event,
     ]);
 });
+
+Route::name('page.show')->get('/{locale}/{slug}', function ($locale, $slug) {
+
+    if (in_array($locale, config('translatable.locales'))) {
+        app()->setLocale($locale);
+    }
+
+    $page = app(\App\Repositories\PageRepository::class)->forSlug($slug);
+
+    abort_unless($page, 404);
+
+    if ($page->redirect) {
+        return redirect()->route('page.show', ['locale' => $locale, 'slug' => $page->slug]);
+    }
+
+    return view('site.page', [
+        'item' => $page,
+    ]);
+});
