@@ -13,4 +13,8 @@ return [
         'title' => 'People',
         'module' => true,
     ],
+    'navigation' => [
+        'title' => 'Navigation',
+        'route' => 'admin.navigation.main',
+    ],
 ];

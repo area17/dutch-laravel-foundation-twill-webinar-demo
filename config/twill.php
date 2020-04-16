@@ -35,4 +35,27 @@ return [
             ],
         ],
     ],
+
+    'buckets' => [
+        'main' => [
+            'name' => 'Navigation',
+            'buckets' => [
+                'main_navigation' => [
+                    'name' => 'Main navigation',
+                    'bucketables' => [
+                        [
+                            'module' => 'pages',
+                            'name' => 'pages',
+                            'scopes' => ['published' => true],
+                        ],
+                    ],
+                    'max_items' => 10,
+                ],
+            ],
+        ],
+    ],
+
+    'bucketsRoutes' => [
+        'main' => 'navigation',
+    ],
 ];
