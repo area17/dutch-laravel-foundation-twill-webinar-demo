@@ -7,4 +7,10 @@
         'translated' => true,
         'maxlength' => 100
     ])
+
+    @formField('date_picker', [
+        'name' => 'date',
+        'label' => 'Date',
+        'withTime' => false
+    ])
 @stop

@@ -17,6 +17,7 @@ class Event extends Model
         'published',
         'title',
         'description',
+        'date',
     ];
 
     public $translatedAttributes = [
